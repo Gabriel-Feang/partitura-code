@@ -226,5 +226,5 @@ index 5b08cd9..728d7bd 100644
 @@ -31,3 +31,3 @@ export class NativePolicyService extends AbstractPolicyService implements IPolic
  			try {
 -				this.watcher.value = createWatcher(this.productName, policyDefinitions, update => {
-+				this.watcher.value = createWatcher('VSCodium', this.productName, policyDefinitions, update => {
++				this.watcher.value = createWatcher('Partitura', this.productName, policyDefinitions, update => {
  					this._onDidPolicyChange(update);

@@ -841,8 +841,8 @@ index f6c294e..6fd209d 100644
  						Severity.Info,
 -						vsixs.length > 1 ? localize('InstallVSIXs.successReload', "Completed installing extensions. Please reload Visual Studio Code to enable them.")
 -							: localize('InstallVSIXAction.successReload', "Completed installing extension. Please reload Visual Studio Code to enable it."),
-+						vsixs.length > 1 ? localize('InstallVSIXs.successReload', "Completed installing extensions. Please reload VSCodium to enable them.")
-+							: localize('InstallVSIXAction.successReload', "Completed installing extension. Please reload VSCodium to enable it."),
++						vsixs.length > 1 ? localize('InstallVSIXs.successReload', "Completed installing extensions. Please reload Partitura to enable them.")
++							: localize('InstallVSIXAction.successReload', "Completed installing extension. Please reload Partitura to enable it."),
  						[{
 diff --git a/src/vs/workbench/contrib/extensions/browser/extensionsActions.ts b/src/vs/workbench/contrib/extensions/browser/extensionsActions.ts
 index 2b8d2e6..46fb2ca 100644

@@ -7,7 +7,7 @@ index 24462a3..1daa855 100644
 +const product = JSON.parse(fs.readFileSync(path.join(root, 'product.json'), 'utf8'));
  const commit = getVersion(root);
 -const sourceMappingURLBase = `https://main.vscode-cdn.net/sourcemaps/${commit}`;
-+const sourceMappingURLBase = `https://github.com/VSCodium/sourcemaps/releases/download/${product.quality}-${commit}`;
++const sourceMappingURLBase = `https://github.com/Gabriel-Feang/partitura-sourcemaps/releases/download/${product.quality}-${commit}`;
  
 @@ -181,3 +182,3 @@ function fromLocalWebpack(extensionPath: string, webpackConfigFileName: string,
  							data.contents = Buffer.from(contents.replace(/\n\/\/# sourceMappingURL=(.*)$/gm, function (_m, g1) {
