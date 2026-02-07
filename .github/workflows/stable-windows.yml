@@ -243,7 +243,7 @@ jobs:
           # 8h to manually approve the request
           wait-for-completion-timeout-in-seconds: 28800
           output-artifact-directory: assets/
-        if: env.SHOULD_BUILD == 'yes' && (env.SHOULD_DEPLOY == 'yes' || github.event.inputs.generate_assets == 'true')
+        if: env.SHOULD_BUILD == 'yes' && (env.SHOULD_DEPLOY == 'yes' || github.event.inputs.generate_assets == 'true') && secrets.SIGNPATH_API_TOKEN != ''
 
       - name: Prepare checksums
         run: ./prepare_checksums.sh
