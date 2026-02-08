@@ -166,6 +166,7 @@ jobs:
       SHOULD_BUILD: ${{ (needs.check.outputs.SHOULD_BUILD == 'yes' || github.event.inputs.generate_assets == 'true') && 'yes' || 'no' }}
       SHOULD_DEPLOY: ${{ needs.check.outputs.SHOULD_DEPLOY }}
       VSCODE_ARCH: ${{ matrix.vscode_arch }}
+      SHOULD_SIGN: ${{ secrets.SIGNPATH_API_TOKEN != '' && 'yes' || 'no' }}
     outputs:
       RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
       SHOULD_DEPLOY: ${{ env.SHOULD_DEPLOY }}
@@ -243,7 +244,7 @@ jobs:
           # 8h to manually approve the request
           wait-for-completion-timeout-in-seconds: 28800
           output-artifact-directory: assets/
-        if: env.SHOULD_BUILD == 'yes' && (env.SHOULD_DEPLOY == 'yes' || github.event.inputs.generate_assets == 'true') && secrets.SIGNPATH_API_TOKEN != ''
+        if: env.SHOULD_BUILD == 'yes' && (env.SHOULD_DEPLOY == 'yes' || github.event.inputs.generate_assets == 'true') && env.SHOULD_SIGN == 'yes'
 
       - name: Prepare checksums
         run: ./prepare_checksums.sh
