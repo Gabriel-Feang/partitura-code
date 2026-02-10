@@ -1,0 +1,21 @@
+{
+  "name": "theme-partitura",
+  "displayName": "Partitura Theme",
+  "description": "The official Partitura color theme.",
+  "version": "1.0.0",
+  "publisher": "partitura",
+  "license": "MIT",
+  "engines": {
+    "vscode": "*"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "Partitura Dark",
+        "label": "Partitura Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/partitura-dark.json"
+      }
+    ]
+  }
+}

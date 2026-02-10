@@ -1,4 +1,7 @@
 {
+  "configurationDefaults": {
+    "workbench.colorTheme": "Partitura Dark"
+  },
   "extensionAllowedBadgeProviders": [
     "api.bintray.com",
     "api.travis-ci.com",

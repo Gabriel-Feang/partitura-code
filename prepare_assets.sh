@@ -207,6 +207,7 @@ fi
 if [[ "${SHOULD_BUILD_REH}" != "no" ]]; then
   echo "Building and moving REH"
   cd "vscode-reh-${VSCODE_PLATFORM}-${VSCODE_ARCH}"
+  . ../prepare_reh_bundle.sh
   tar czf "../assets/${APP_NAME_LC}-reh-${VSCODE_PLATFORM}-${VSCODE_ARCH}-${RELEASE_VERSION}.tar.gz" .
   cd ..
 fi
@@ -214,6 +215,7 @@ fi
 if [[ "${SHOULD_BUILD_REH_WEB}" != "no" ]]; then
   echo "Building and moving REH-web"
   cd "vscode-reh-web-${VSCODE_PLATFORM}-${VSCODE_ARCH}"
+  . ../prepare_reh_bundle.sh
   tar czf "../assets/${APP_NAME_LC}-reh-web-${VSCODE_PLATFORM}-${VSCODE_ARCH}-${RELEASE_VERSION}.tar.gz" .
   cd ..
 fi
