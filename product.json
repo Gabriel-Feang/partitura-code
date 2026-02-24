@@ -1,6 +1,6 @@
 {
   "configurationDefaults": {
-    "workbench.colorTheme": "Partitura Dark"
+    "workbench.colorTheme": "Partitura"
   },
   "extensionAllowedBadgeProviders": [
     "api.bintray.com",

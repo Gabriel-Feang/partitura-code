@@ -11,8 +11,8 @@
   "contributes": {
     "themes": [
       {
-        "id": "Partitura Dark",
-        "label": "Partitura Dark",
+        "id": "Partitura",
+        "label": "Partitura",
         "uiTheme": "vs-dark",
         "path": "./themes/partitura-dark.json"
       }

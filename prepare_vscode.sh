@@ -13,6 +13,10 @@ cp -f LICENSE vscode/LICENSE.txt
 
 cd vscode || { echo "'vscode' dir not found"; exit 1; }
 
+# Add custom extensions to git index so vsce.listFiles() finds them
+# (prepare_vscode.sh copies them but they're untracked in the VS Code repo)
+git add extensions/theme-partitura/ 2>/dev/null || true
+
 { set +x; } 2>/dev/null
 
 # {{{ product.json
